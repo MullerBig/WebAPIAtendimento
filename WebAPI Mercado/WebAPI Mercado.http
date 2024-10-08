@@ -1,0 +1,6 @@
+@WebAPI_Mercado_HostAddress = http://localhost:5252
+
+GET {{WebAPI_Mercado_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
