@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace WebAPI_Mercado.Migrations
+namespace WebAPIAtendimento.Migrations
 {
     /// <inheritdoc />
     public partial class SistemaCadastro : Migration

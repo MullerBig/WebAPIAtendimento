@@ -1,4 +1,4 @@
-namespace WebAPI_Mercado
+namespace WebAPIAtendimento
 {
     public class WeatherForecast
     {

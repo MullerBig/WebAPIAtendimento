@@ -1,4 +1,4 @@
-﻿namespace WebAPI_Mercado.Entities
+﻿namespace WebAPIAtendimento.Entities
 {
     public class Usuario
     {

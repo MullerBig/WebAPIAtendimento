@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebAPI_Mercado.Context;
+using WebAPIAtendimento.Context;
 
 #nullable disable
 
-namespace WebAPI_Mercado.Migrations
+namespace WebAPIAtendimento.Migrations
 {
     [DbContext(typeof(SCContext))]
     partial class SCContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace WebAPI_Mercado.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebAPI_Mercado.Entities.TipoUsuario", b =>
+            modelBuilder.Entity("WebAPIAtendimento.Entities.TipoUsuario", b =>
                 {
                     b.Property<int>("TipoUsuarioId")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace WebAPI_Mercado.Migrations
                     b.ToTable("TipoUsuarios");
                 });
 
-            modelBuilder.Entity("WebAPI_Mercado.Entities.Usuario", b =>
+            modelBuilder.Entity("WebAPIAtendimento.Entities.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd()

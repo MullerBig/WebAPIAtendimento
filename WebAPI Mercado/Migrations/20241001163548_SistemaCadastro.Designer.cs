@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebAPI_Mercado.Context;
+using WebAPIAtendimento.Context;
 
 #nullable disable
 
-namespace WebAPI_Mercado.Migrations
+namespace WebAPIAtendimento.Migrations
 {
     [DbContext(typeof(SCContext))]
     [Migration("20241001163548_SistemaCadastro")]
@@ -24,7 +24,7 @@ namespace WebAPI_Mercado.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebAPI_Mercado.Entities.TipoUsuario", b =>
+            modelBuilder.Entity("WebAPIAtendimento.Entities.TipoUsuario", b =>
                 {
                     b.Property<int>("TipoUsuarioId")
                         .ValueGeneratedOnAdd()

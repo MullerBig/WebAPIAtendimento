@@ -1,4 +1,4 @@
-using WebAPI_Mercado.Context;
+using WebAPIAtendimento.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

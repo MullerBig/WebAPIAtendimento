@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebAPI_Mercado.Entities;
+using WebAPIAtendimento.Entities;
 
-namespace WebAPI_Mercado.Context
+namespace WebAPIAtendimento.Context
 {
     public class SCContext : DbContext
     {

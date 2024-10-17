@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebAPI_Mercado.Context;
-using WebAPI_Mercado.Entities;
+using WebAPIAtendimento.Context;
+using WebAPIAtendimento.Entities;
 
 namespace WebAPI_Mercado.Controllers
 {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("api/[Controller]")]
 
     public class TipoUsuarioController : ControllerBase
     {
