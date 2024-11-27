@@ -1,0 +1,27 @@
+﻿@model MVCAtendimento.Models.TipoUsuario;
+
+@{
+	ViewData["Title"] = "Detalhes do Tipo Usuario";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.TipoUsuarioId)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.TipoUsuarioId)
+		</dt>
+		<hr />
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(x => x.Descricao)
+		</dt>
+		<dt class="col-sm-10">
+			@Html.DisplayFor(x => x.Descricao)
+		</dt>
+	</dl>
+</div>
+<a asp-action="Editar" asp-route-id="@Model.TipoUsuarioId">Editar</a> |
+<a asp-action="Index">Voltar</a> 

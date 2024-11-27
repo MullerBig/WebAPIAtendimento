@@ -1,6 +1,6 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MVCAtendimento.Models;
-using System.Diagnostics;
 
 namespace MVCAtendimento.Controllers
 {

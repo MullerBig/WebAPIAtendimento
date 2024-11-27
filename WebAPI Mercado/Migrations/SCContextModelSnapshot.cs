@@ -7,7 +7,7 @@ using WebAPIAtendimento.Context;
 
 #nullable disable
 
-namespace WebAPIAtendimento.Migrations
+namespace WebAPI_Mercado.Migrations
 {
     [DbContext(typeof(SCContext))]
     partial class SCContextModelSnapshot : ModelSnapshot

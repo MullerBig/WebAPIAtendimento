@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MVCAtendimento.Models.Usuario>;
+
+@{
+	ViewData["Title"] = "Listagem de Usuario";
+}
+
+<h2>Usuarios</h2>
+
+<p>
+	<a asp-action="Criar">Novo Usuario</a>
+</p>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.UsuarioId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Nome)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.AbreviacaoNome)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Descricao)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.TipoUsuarioId)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<th>
+					@Html.DisplayFor(model => item.UsuarioId)
+				</th>
+				<th>
+					@Html.DisplayFor(model => item.Nome)
+				</th>
+				<th>
+					@Html.DisplayFor(model => item.AbreviacaoNome)
+				</th>
+				<th>
+					@Html.DisplayFor(model => item.Descricao)
+				</th>
+				<th>
+					@Html.DisplayFor(model => item.TipoUsuarioId)
+				</th>
+				<td>
+					<a asp-action="Editar" asp-route-id="@item.UsuarioId">Editar</a> |
+					<a asp-action="Detalhes" asp-route-id="@item.UsuarioId">Detalhes</a> |
+					<a asp-action="Deletar" asp-route-id="@item.UsuarioId">Deletar</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

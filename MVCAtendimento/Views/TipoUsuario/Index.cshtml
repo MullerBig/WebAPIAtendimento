@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVCAtendimento.Models.TipoUsuario>;
+
+@{
+	ViewData["Title"] = "Listagem de Tipo Usuario";
+}
+
+<h2>Tipos Usuarios</h2>
+
+<p>
+	<a asp-action="Criar">Novo Tipo Usuario</a>
+</p>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.TipoUsuarioId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Descricao)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(model => item.TipoUsuarioId)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.Descricao)
+				</td>
+				<td>
+					<a asp-action="Editar" asp-route-id="@item.TipoUsuarioId">Editar</a> |
+					<a asp-action="Detalhes" asp-route-id="@item.TipoUsuarioId">Detalhes</a> |
+					<a asp-action="Deletar" asp-route-id="@item.TipoUsuarioId">Deletar</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -8,11 +8,11 @@ using WebAPIAtendimento.Context;
 
 #nullable disable
 
-namespace WebAPIAtendimento.Migrations
+namespace WebAPI_Mercado.Migrations
 {
     [DbContext(typeof(SCContext))]
-    [Migration("20241001163548_SistemaCadastro")]
-    partial class SistemaCadastro
+    [Migration("20241125141253_SistemaAtendimento")]
+    partial class SistemaAtendimento
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,7 @@ namespace WebAPIAtendimento.Migrations
                     b.ToTable("TipoUsuarios");
                 });
 
-            modelBuilder.Entity("WebAPI_Mercado.Entities.Usuario", b =>
+            modelBuilder.Entity("WebAPIAtendimento.Entities.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd()

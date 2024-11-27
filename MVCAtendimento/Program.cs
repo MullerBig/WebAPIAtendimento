@@ -1,11 +1,12 @@
-using MVCAtendimento.Interfaces;
-using MVCAtendimento.Repositorio;
+using Microsoft.EntityFrameworkCore;
+using MVCAtendimento.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<SCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<ITipoUsuario,RepositorioTipoUsuario>();
 
 var app = builder.Build();
 
@@ -18,14 +19,16 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapStaticAssets();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+
 
 app.Run();

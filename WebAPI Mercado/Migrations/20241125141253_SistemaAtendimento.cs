@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace WebAPIAtendimento.Migrations
+namespace WebAPI_Mercado.Migrations
 {
     /// <inheritdoc />
-    public partial class SistemaCadastro : Migration
+    public partial class SistemaAtendimento : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
